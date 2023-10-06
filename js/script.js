@@ -2,6 +2,7 @@ let num1 = "";
 let num2 = "";
 let valor = "";
 let temPonto = false;
+let executa = "";
 mensagem = (msg) => console.log(msg);
 soma = (a,b) => a + b; 
 sub = (a,b) => a - b; 
@@ -28,14 +29,22 @@ mostrar_display(valor);
 
 }
 
-mensagem(soma(15,soma(11,soma(4,7))));
+function operacao(op){
+    executa = op;
+    num1 = valor;
+}
 
-mensagem(sub(18,7));
-
-mensagem(soma(2,div(2,2)))
-
-mensagem(juros_simples(420,18));
-
-mensagem(montante_juros_simples(420,18));
-
-
+function calcula(){
+    if(executa != ""){
+        num2 = valor;
+        if(executa == "soma") mostrar_display(soma(number(num1),number(num2)));
+        if(executa == "sub") mostrar_display(sub(number(num1),number(num2)));
+        if(executa == "div") mostrar_display(div(number(num1),number(num2)));
+        if(executa == "mult") mostrar_display(mult(number(num1),number(num2)));
+        num1 = "";
+        num2 = "";
+        valor = "";
+        temPonto = false;
+        executa = "";
+    }
+}
