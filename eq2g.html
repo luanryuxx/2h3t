@@ -10,26 +10,26 @@
 </head>
 <body>
     
-    <select id="sinal_a">
+    <select onchange="muda_sinal_a()" id="sinal_a">
         <option value="+">+</option>
         <option value="-">-</option>
     </select>
-    <input class="entrada" type="number" id="valor_a">
+    <input onchange="set_valor_a()" class="entrada" type="number" id="valor_a">
     X<sup>2</sup>
 
-    <select id="sinal_b">
+    <select onchange="muda_sinal_b()" id="sinal_b">
         <option value="+">+</option>
         <option value="-">-</option>
     </select>
-    <input class="entrada" type="number" id="valor_b">
+    <input onchange="set_valor_b()" class="entrada" type="number" id="valor_b">
     X
 
-    <select id="sinal_c">
+    <select onchange="muda_sinal_c()" id="sinal_c">
         <option value="+">+</option>
         <option value="-">-</option>
     </select>
-    <input class="entrada" type="number" id="valor_c">
-    = 0
-
+    <input onchange="set_valor_c()" class="entrada" type="number" id="valor_c">
+    = 0 <br><br>
+    &Delta; = <span id="delta"></span>
 </body>
 </html>
